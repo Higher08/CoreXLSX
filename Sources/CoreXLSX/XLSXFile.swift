@@ -112,7 +112,7 @@ public class XLSXFile {
     }
 
     var data = Data()
-    _ = try archive.extract(entry, bufferSize: bufferSize) {
+    _ = try archive.extract(entry, bufferSize: Int(bufferSize)) {
       data += $0
     }
 
